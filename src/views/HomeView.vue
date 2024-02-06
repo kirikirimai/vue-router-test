@@ -17,6 +17,7 @@ onBeforeMount(fetchArticles)
 <template>
   <main>
     <h1>記事一覧</h1>
+    <p v-if="loading">loading....</p>
     <ul>
       <!-- router-linkを使用して記事詳細へのリンクを作成 -->
       <li v-for="post in posts.slice(0,10)" :key="post.id">
