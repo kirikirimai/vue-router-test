@@ -14,7 +14,15 @@ const router = createRouter({
     {
       path: '/:id',
       name: 'post-detail',
-      component: () => import('../views/PostDetailView.vue')  // 仮のコンポーネント名、実際の名前に修正する
+      component: () => import('../views/PostDetailView.vue'),
+      children:[
+        {
+          path: 'photo',
+          name: 'photo',
+          component: () => import('../views/PhotoView.vue')
+        }
+      
+      ]
     },
     {
       path: '/about',

@@ -32,6 +32,9 @@ onBeforeMount(fetchPost)
       <h1>記事詳細</h1>
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
+      <p><router-link :to="{name:'photo',params:{id:route.params.id}}">写真はこちら</router-link></p>
+      <!-- ネストされたルートの表示 -->
+      <RouterView />
     </div>
   </main>
 </template>
