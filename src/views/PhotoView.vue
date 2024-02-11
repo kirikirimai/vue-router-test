@@ -43,7 +43,7 @@ watch(() => route.params.id, (newId, oldId) => {
       <img :src="photo.thumbnailUrl" :alt="photo.title" />
     </div>
     <!---次と前の写真-->
-    <router-link  v-if="Number(route.params.id) > 1" :to="{ name: 'photo', params: { id: Number(route.params.id) - 1 } }"> 前の写真</router-link>
-    <router-link :to="{ name: 'photo', params: { id: Number(route.params.id) + 1 } }"> 次の写真</router-link>
+    <!-- <router-link  v-if="Number(route.params.id) > 1" :to="{ name: 'photo', params: { id: Number(route.params.id) - 1 } }"> 前の写真</router-link>
+    <router-link :to="{ name: 'photo', params: { id: Number(route.params.id) + 1 } }"> 次の写真</router-link> -->
   </main>
 </template>
