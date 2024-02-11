@@ -14,7 +14,14 @@ const router = createRouter({
     {
       path: '/:id',
       name: 'post-detail',
-      component: () => import('../views/PostDetailView.vue')
+      component: () => import('../views/PostDetailView.vue'),
+      children: [
+        {
+          path: 'edit',
+          name: 'photo',
+          component: () => import('../views/PhotoView.vue')
+        }
+      ]
     },
     {
       path: '/about',
