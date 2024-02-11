@@ -46,9 +46,9 @@ const goToPageHandler = (page) => {
       <h1>記事詳細：{{ route.params.id }}</h1>
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
-      <!-- <p><router-link :to="{name:'photo',params:{id:route.params.id}}">写真はこちら</router-link></p> -->
+      <p><router-link :to="{name:'photo',params:{id:route.params.id}}">写真はこちら</router-link></p>
       <!-- ネストされたルートの表示 -->
-      <!-- <RouterView /> -->
+      <RouterView />
     </div>
     <PaginationComposable
       :currentPage="Number(route.params.id)"

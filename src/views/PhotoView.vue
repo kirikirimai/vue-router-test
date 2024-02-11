@@ -21,11 +21,6 @@ const fetchPhoto = async () => {
   }
 };
 
-onMounted(() => {
-    fetchPhoto();
-
-}),
-
 
 watch(() => route.params.id, (newId, oldId) => {
   if (newId !== oldId) {
@@ -36,7 +31,7 @@ watch(() => route.params.id, (newId, oldId) => {
 
 <template>
   <main>
-    <h1>写真詳細</h1>
+    <h1>写真詳細ID:{{ route.params.id }}</h1>
     <div v-if="isLoading">ローディング中...</div>
     <div v-if="!isLoading">
       <h2>{{ photo.title }}</h2>
